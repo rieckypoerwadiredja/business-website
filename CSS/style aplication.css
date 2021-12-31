@@ -1,0 +1,654 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Secular+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --titile-font: "Quicksand", sans-serif;
+    --kutip: "Secular One", sans-serif;
+    --testi: "Montserrat", sans-serif;
+    --hand: 'Caveat', cursive;
+
+}
+
+.aplication-container {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    /* background-color: red; */
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+}
+
+.desc-aplication {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 5% 0 0 5%;
+    /* background-color: aqua; */
+}
+
+.desc-aplication h1 {
+    font-family: var(--titile-font);
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.desc-aplication h1 span {
+    font-family: var(--titile-font);
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #0eb04d;
+}
+
+.desc-aplication h1 p {
+    font-family: var(--titile-font);
+    font-size: 15px;
+    color: rgb(173, 173, 173);
+    text-transform: capitalize;
+}
+
+.desc-aplication .desc {
+    position: relative;
+    margin-top: 5%;
+    list-style: none;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+.desc-aplication .list-desc {
+    margin-top: 20px;
+    /* background-color: red; */
+    position: relative;
+    cursor: auto;
+}
+
+
+.desc-aplication .list-desc::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120%;
+    top: 0;
+    left: -7%;
+    background-color: #ccc;
+    transition: .2s;
+}
+
+
+
+.desc-aplication .list-desc h3 {
+    font-size: 24px;
+    font-family: var(--titile-font);
+    font-weight: bolder;
+    color: #1f2b3a;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.desc-aplication .list-desc p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #1f2b3a;
+}
+
+.desc-aplication .content-app {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    height: 0px !important;
+    overflow: hidden !important;
+    /* background-color: yellow; */
+    transition: .5s !important;
+}
+
+.desc-aplication .list-desc a {
+    font-size: 14px;
+    color: #1f2b3a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.list-desc a i {
+    margin-left: 5px;
+}
+
+/* -------------
+HOVER
+---------------- */
+
+.desc-aplication .list-desc:hover::after {
+    background-color: #73ad98;
+    transition: .2s;
+}
+
+/* --------------------
+CLICK
+----------------------- */
+.list-desc.active::after {
+    background-color: #73ad98;
+    transition: .2s;
+    height: 100%;
+    transition: .5s;
+}
+
+
+.list-desc.active .content-app {
+    height: 150px !important;
+    transition: .5s !important;
+}
+
+/* ----------------
+bagian gambar 
+-------------------*/
+.aplication {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+
+    padding: 5% 0 0 0 !important;
+}
+
+.aplication img {
+    width: 50%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+    float: left;
+}
+
+.aplication img:nth-child(1) {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 2;
+}
+
+.aplication img:nth-child(2) {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    width: 40%;
+    z-index: 3;
+}
+
+.aplication img:nth-child(3) {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 30%;
+    height: auto;
+    z-index: 2;
+}
+
+
+/* ---------------------
+ANIMATION 
+------------------------ */
+.img-app {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.img-app:nth-child(2) {
+    transition-delay: .5s;
+}
+
+.img-app-ani {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.judul-aplication {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: .5s;
+
+}
+
+.judul-app-ani {
+    transform: translateX(0px);
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+
+.list-desc {
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: .5s;
+    transition-delay: 1.2s;
+}
+
+.list-desc-ani {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ---------------------
+RESPONSIVE
+------------------------ */
+@media (max-width:900px) {
+    .desc-aplication {
+        width: 60%;
+    }
+
+    .aplication {
+        width: 40%;
+    }
+
+    .aplication img {
+        margin-top: 10%;
+    }
+
+    /* img */
+    .aplication img:nth-child(1) {
+        top: 15%;
+        left: 0;
+    }
+
+    .aplication img:nth-child(2) {
+        top: 45%;
+        left: 30%;
+        width: 50%;
+    }
+
+    .aplication img:nth-child(3) {
+        top: 20%;
+        left: 55%;
+        width: 40%;
+    }
+}
+
+@media (max-width:850px) {
+
+    /* judul */
+    .desc-aplication h1 {
+        font-size: 35px;
+    }
+
+    .desc-aplication h1 p {
+        font-size: 13px;
+    }
+
+    .desc-aplication h1 span {
+        font-size: 35px;
+    }
+
+    /* deskripsi */
+    .desc-aplication .list-desc h3 {
+        font-size: 20px;
+    }
+
+    .desc-aplication .list-desc p {
+        font-size: 14px;
+        margin: 9px 0;
+    }
+
+    .desc-aplication .list-desc a {
+        font-size: 14px;
+    }
+
+    .desc-aplication .desc {
+        margin-top: 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width:768px) {
+
+    /* judul */
+    .desc-aplication h1 {
+        font-size: 30px;
+    }
+
+    .desc-aplication h1 p {
+        font-size: 12px;
+    }
+
+    .desc-aplication h1 span {
+        font-size: 30px;
+    }
+
+    /* deskripsi */
+    .desc-aplication .list-desc h3 {
+        font-size: 18px;
+    }
+
+    .desc-aplication .list-desc p {
+        font-size: 13px;
+        margin: 9px 0;
+    }
+
+    .desc-aplication .list-desc a {
+        font-size: 13px;
+    }
+
+    /* img */
+    .aplication img:nth-child(1) {
+        top: 15%;
+        left: 0;
+        width: 40%;
+    }
+
+    .aplication img:nth-child(2) {
+        top: 45%;
+        left: 20%;
+        width: 50%;
+    }
+
+    .aplication img:nth-child(3) {
+        top: 25%;
+        left: 55%;
+        width: 35%;
+    }
+}
+
+@media (max-width:650px) {
+    .aplication-container {
+        height: 700px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -30px;
+        padding-bottom: 10px;
+    }
+
+    .desc-aplication {
+        width: 100%;
+        height: 50%;
+        padding: 5% 0 0 5%;
+    }
+
+    .aplication {
+        width: 100%;
+        height: 50%;
+        /* background-color: aqua; */
+        display: flex;
+        padding-top: 0;
+    }
+
+    /* img */
+    .aplication img:nth-child(1) {
+        top: 2%;
+        left: 0;
+        width: 80%;
+    }
+
+    .aplication img:nth-child(2) {
+        top: 30%;
+        left: 40%;
+        width: 20%;
+    }
+
+    .aplication img:nth-child(3) {
+        top: 5%;
+        left: 55%;
+        width: 15%;
+    }
+
+    /* judul */
+    .desc-aplication h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .desc-aplication h1 p {
+        font-size: 12px;
+    }
+
+    .desc-aplication h1 span {
+        font-size: 30px;
+    }
+
+    /* deskripsi */
+    .desc-aplication .list-desc h3 {
+        font-size: 15px;
+    }
+
+    .desc-aplication .list-desc p {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .desc-aplication .list-desc a {
+        font-size: 12px;
+    }
+
+    .desc-aplication .desc {
+        position: relative;
+        margin-top: 5%;
+        list-style: none;
+        width: 80%;
+        margin-left: 5%;
+        margin: 0 auto;
+    }
+
+    .list-desc.active .content-app {
+        height: 100px !important;
+        transition: .5s !important;
+    }
+
+    /* line hijau */
+    .desc-aplication .list-desc::after {
+        width: 2px;
+        height: 110%;
+        top: 0;
+        left: -4%;
+        background-color: #ccc;
+        transition: .2s;
+    }
+
+    .list-desc.active::after {
+        background-color: #73ad98;
+        height: 100%;
+        transition: .5s;
+    }
+}
+
+@media (max-width:550px) {
+    .aplication-container {
+        margin-top: -50px;
+    }
+
+    /* judul */
+    .desc-aplication h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .desc-aplication h1 p {
+        font-size: 11px;
+    }
+
+    .desc-aplication h1 span {
+        font-size: 25px;
+    }
+
+    /* deskripsi */
+    .desc-aplication .list-desc h3 {
+        font-size: 13px;
+    }
+
+    .desc-aplication .list-desc p {
+        font-size: 11px;
+        margin: 5px 0;
+    }
+
+    .desc-aplication .list-desc a {
+        font-size: 11px;
+    }
+
+    /* img */
+    .aplication img:nth-child(1) {
+        top: 2%;
+        left: 0;
+        width: 75%;
+    }
+
+    .aplication img:nth-child(2) {
+        top: 30%;
+        left: 40%;
+        width: 20%;
+    }
+
+    .aplication img:nth-child(3) {
+        top: 10%;
+        left: 55%;
+        width: 15%;
+    }
+}
+
+@media (max-width:500px) {
+
+    /* judul */
+    .desc-aplication h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .desc-aplication h1 p {
+        font-size: 11px;
+    }
+
+    .desc-aplication h1 span {
+        font-size: 20px;
+    }
+
+    .list-desc.active .content-app {
+        height: 120px !important;
+        transition: .5s !important;
+    }
+
+    /* img */
+    .aplication img:nth-child(1) {
+        top: 2%;
+        left: 0;
+        width: 75%;
+    }
+
+    .aplication img:nth-child(2) {
+        top: 40%;
+        left: 40%;
+        width: 20%;
+    }
+
+    .aplication img:nth-child(3) {
+        top: 10%;
+        left: 53%;
+        width: 17%;
+    }
+}
+
+@media (max-width:450px) {
+
+    /* img */
+    .aplication img:nth-child(1) {
+        top: 2%;
+        left: 0;
+        width: 75%;
+    }
+
+    .aplication img:nth-child(2) {
+        top: 40%;
+        left: 40%;
+        width: 25%;
+    }
+
+    .aplication img:nth-child(3) {
+        top: 10%;
+        left: 53%;
+        width: 20%;
+    }
+}
+
+@media (max-width:425px) {
+    .aplication-container {
+        height: 600px;
+        padding-bottom: 0;
+        margin-top: -80px;
+    }
+
+    /* judul */
+    .desc-aplication h1 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .desc-aplication h1 p {
+        font-size: 9.5px;
+    }
+
+    .desc-aplication h1 span {
+        font-size: 17px;
+    }
+
+    /* deskripsi */
+    .desc-aplication .list-desc h3 {
+        font-size: 11px;
+    }
+
+    .desc-aplication .list-desc p {
+        font-size: 9.5px;
+        margin: 5px 0;
+    }
+
+    .desc-aplication .list-desc a {
+        font-size: 9.5px;
+    }
+
+    /* desc heigh */
+    .list-desc.active .content-app {
+        height: 90px !important;
+        transition: .5s !important;
+    }
+}
+
+@media (max-width:375px) {
+    .aplication-container {
+        height: 600px;
+        padding-bottom: 0;
+        margin-top: -70px;
+    }
+
+    /* desc heigh */
+    .list-desc.active .content-app {
+        height: 110px !important;
+        transition: .5s !important;
+    }
+}
+
+@media (max-width:320px) {
+    .aplication-container {
+        height: 600px;
+        padding-bottom: 0;
+        margin-top: -40px;
+    }
+
+    /* judul */
+    .desc-aplication h1 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .desc-aplication h1 p {
+        font-size: 9.5px;
+    }
+
+    .desc-aplication h1 span {
+        font-size: 14px;
+    }
+}

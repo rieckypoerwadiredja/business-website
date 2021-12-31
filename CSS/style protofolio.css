@@ -1,0 +1,871 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Secular+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --titile-font: "Quicksand", sans-serif;
+    --kutip: "Secular One", sans-serif;
+    --testi: "Montserrat", sans-serif;
+}
+
+.portofolio-container {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    /* background-color: red; */
+    padding: 0;
+    margin-top: 50px;
+}
+
+/* Bagian atas / gambar */
+.portofolio-container .left-protofolio {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0;
+}
+
+.left-protofolio .img-container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+/* bagian gambarnya */
+.img-container .top-img,
+.img-container .bottom-img {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+    display: flex;
+}
+
+/* isi gambarnya */
+.top-img .box-1,
+.bottom-img .box-4 {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    /* background-color: khaki; */
+    padding: 1%;
+    overflow: hidden;
+}
+
+.top-img .box-1 img,
+.bottom-img .box-4 img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.top-img .box-2,
+.bottom-img .box-3 {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    /* background-color: orange; */
+    padding: 1%;
+    overflow: hidden;
+}
+
+.top-img .box-2 img,
+.bottom-img .box-3 img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* isi tulisannya */
+.box-1 .font-por,
+.box-4 .font-por {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    color: #fff;
+    width: 35%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.box-2 .font-por,
+.box-3 .font-por {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 10%;
+    color: #fff;
+    width: 75%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+/* font style */
+.font-por h1 {
+    font-size: 18px;
+    font-family: var(--titile-font);
+}
+
+.font-por p {
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.font-por a {
+    padding: 5px 15px !important;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.font-por a:hover {
+    background-color: #fff;
+    color: #000;
+    transition: .3s;
+}
+
+/* bagian tulisan  */
+.portofolio-container .right-portofolio {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    /* background-color: purple; */
+    padding: 0 5%;
+    text-align: center;
+}
+
+.right-portofolio h1 span {
+    color: #0eb04d;
+    font-family: var(--titile-font);
+}
+
+.right-portofolio h1 {
+    font-size: 40px;
+    color: #000;
+    font-family: var(--titile-font);
+
+}
+
+.right-portofolio p {
+    font-size: 15px;
+    color: #000;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\ANIMATION\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.img-porto {
+    opacity: 0;
+}
+
+.img-porto-ani {
+    opacity: 1;
+    transition: 1s;
+}
+
+.font-porto {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.font-porto-ani {
+    opacity: 1;
+    transform: translateY(0);
+    transition: .5s;
+    transition-delay: 1s;
+}
+
+@media (max-width:768px) {
+    .portofolio-container {
+        height: 800px;
+        margin-top: 40px;
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio h1 {
+        font-size: 35px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 14px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .font-por h1 {
+        font-size: 15px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 12px;
+        margin: 12px 0;
+    }
+
+    .font-por a {
+        padding: 5px 15px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 13px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+}
+
+@media (max-width:650px) {
+    .portofolio-container {
+        height: 700px;
+        margin-top: 20px;
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio {
+        padding: 0 10% !important;
+    }
+
+    .right-portofolio h1 {
+        font-size: 30px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 12px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .font-por h1 {
+        font-size: 13px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 10px;
+        margin: 12px 0;
+    }
+
+    .font-por a {
+        padding: 5px 15px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+}
+
+@media (max-width:550px) {
+    .portofolio-container {
+        height: 600px;
+        margin-top: 20px;
+        /* background-color: aqua; */
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio {
+        height: 45%;
+        padding: 0 10% !important;
+    }
+
+    .left-protofolio {
+        height: 55% !important;
+        /* background-color: red; */
+    }
+
+    .right-portofolio h1 {
+        font-size: 23px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 10px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .font-por h1 {
+        font-size: 11px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 9px;
+        margin: 12px 0;
+    }
+
+    .font-por a {
+        padding: 2px 10px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 10px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    /* isi tulisannya */
+    .box-1 .font-por,
+    .box-4 .font-por {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 5%;
+        color: #fff;
+        width: 45%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .box-2 .font-por,
+    .box-3 .font-por {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 10%;
+        color: #fff;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+}
+
+@media (max-width:500px) {
+    .portofolio-container {
+        height: 600px;
+        margin-top: 20px;
+        /* background-color: aqua; */
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio {
+        height: 45%;
+        padding: 0 10% !important;
+    }
+
+    .left-protofolio {
+        height: 55% !important;
+        /* background-color: red; */
+    }
+
+    .right-portofolio h1 {
+        font-size: 20px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 10px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .font-por h1 {
+        font-size: 10px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 8px;
+        margin: 10px 0;
+    }
+
+    .font-por a {
+        padding: 2px 10px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 10px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    /* isi tulisannya */
+    .box-1 .font-por,
+    .box-4 .font-por {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 5%;
+        color: #fff;
+        width: 45%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .box-2 .font-por,
+    .box-3 .font-por {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 10%;
+        color: #fff;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+}
+
+@media (max-width:425px) {
+    .portofolio-container {
+        height: 600px;
+        margin-top: 20px;
+        /* background-color: aqua; */
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio {
+        height: 45%;
+        padding: 0 10% !important;
+    }
+
+    .left-protofolio {
+        height: 55% !important;
+        /* background-color: red; */
+    }
+
+    .right-portofolio h1 {
+        font-size: 20px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 10px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .font-por h1 {
+        font-size: 10px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 8px;
+        margin: 10px 0;
+    }
+
+    .font-por a {
+        padding: 2px 10px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 10px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    /* isi tulisannya */
+    .box-1 .font-por,
+    .box-4 .font-por {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 5%;
+        color: #fff;
+        width: 45%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .box-2 .font-por,
+    .box-3 .font-por {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 10%;
+        color: #fff;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+}
+
+@media (max-width:425px) {
+
+    .portofolio-container {
+        height: 550px;
+        margin-top: 20px;
+        /* background-color: aqua; */
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio {
+        height: 40%;
+        padding: 0 10% !important;
+    }
+
+    .left-protofolio {
+        height: 60% !important;
+        /* background-color: red; */
+    }
+
+    .top-img .box-1,
+    .bottom-img .box-4 {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-img .box-2,
+    .bottom-img .box-3 {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-1 .font-por,
+    .box-4 .font-por {
+        width: 75%;
+        left: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2
+    }
+
+    .box-2 .font-por,
+    .box-3 .font-por {
+        width: 75%;
+        left: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .font-por h1 {
+        font-size: 10px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 7px;
+        margin: 8px 0;
+    }
+
+    .font-por a {
+        padding: 1px 5px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 10px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    .right-portofolio h1 {
+        font-size: 17px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 9px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:375px) {
+
+    .portofolio-container {
+        height: 500px;
+        margin-top: 20px;
+        /* background-color: aqua; */
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio {
+        height: 40%;
+        padding: 0 10% !important;
+    }
+
+    .left-protofolio {
+        height: 60% !important;
+        /* background-color: red; */
+    }
+
+    .top-img .box-1,
+    .bottom-img .box-4 {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-img .box-2,
+    .bottom-img .box-3 {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-1 .font-por,
+    .box-4 .font-por {
+        width: 75%;
+        left: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2
+    }
+
+    .box-2 .font-por,
+    .box-3 .font-por {
+        width: 75%;
+        left: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .font-por h1 {
+        font-size: 10px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 7px;
+        margin: 8px 0;
+    }
+
+    .font-por a {
+        padding: 1px 5px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 10px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    .right-portofolio h1 {
+        font-size: 17px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 9px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:375px) {
+
+    .portofolio-container {
+        height: 500px;
+        margin-top: 20px;
+        /* background-color: aqua; */
+    }
+
+    .left-protofolio .img-container {
+        width: 90%;
+    }
+
+    .right-portofolio {
+        height: 40%;
+        padding: 0 10% !important;
+    }
+
+    .left-protofolio {
+        height: 60% !important;
+        /* background-color: red; */
+    }
+
+    .top-img .box-1,
+    .bottom-img .box-4 {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-img .box-2,
+    .bottom-img .box-3 {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-1 .font-por,
+    .box-4 .font-por {
+        width: 75%;
+        left: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2
+    }
+
+    .box-2 .font-por,
+    .box-3 .font-por {
+        width: 75%;
+        left: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .font-por h1 {
+        font-size: 10px;
+        font-family: var(--titile-font);
+    }
+
+    .font-por p {
+        font-size: 6.8px;
+        margin: 8px 0;
+    }
+
+    .font-por a {
+        padding: 1px 5px !important;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 9px;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    .right-portofolio h1 {
+        font-size: 14px;
+        color: #000;
+        font-family: var(--titile-font);
+
+    }
+
+    .right-portofolio p {
+        font-size: 9.5px;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+    }
+}

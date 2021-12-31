@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Secular+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.div {
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --titile-font: "Quicksand", sans-serif;
+    --kutip: "Secular One", sans-serif;
+    --testi: "Montserrat", sans-serif;
+    --hand: 'Caveat', cursive;
+
+}
+
+.testimoni-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* background-color: red; */
+    margin-top: 70px;
+    padding: 0;
+
+}
+
+
+.testimoni-container .ceo-container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #111e35;
+    padding: 0 5%;
+}
+
+.testimoni-container .ceo-container::after {
+    content: '"';
+    position: absolute;
+    top: -80px;
+    right: 10px;
+    font-size: 240px;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.404);
+    font-family: var(--kutip);
+}
+
+/* testi */
+.testimoni-container .ceo-container .content-text {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.testimoni-container h4 {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: var(--hand);
+    color: #fff;
+}
+
+.testimoni-container h4 span {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--hand);
+}
+
+.testimoni-container p {
+    font-size: 20px;
+    font-family: var(--hand);
+    margin-top: 10px;
+    color: #fff;
+}
+
+
+/* img box */
+.testimoni-container .ceo-container .img-box {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimoni-container .img-box img {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 60px);
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* company */
+.testimoni-container .cunstomer-container {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    /* background-color: royalblue; */
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cunstomer-container h1 {
+    font-size: 16px;
+    font-family: var(--titile-font);
+    font-weight: 900;
+}
+
+.cunstomer-container .img-comp {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-comp img {
+    position: relative;
+    width: calc(100% / 6);
+    height: auto;
+    max-height: 50%;
+    /* background-color: red; */
+    object-fit: contain;
+}
+
+/* control img */
+.testimoni-container .ceo-container .control-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceo-container .control-img .control {
+    position: relative;
+    width: 20px;
+    height: 4px;
+    background-color: rgba(141, 138, 138, 0.521);
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: .3s;
+}
+
+.control.active {
+    background-color: rgba(189, 184, 184, 0.815) !important;
+    transition: .3s;
+}
+
+/* ----------------
+ANIMATION
+-------------------*/
+@keyframes cunsImg {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.img-testi.active {
+    animation: cunsImg .75s forwards;
+}
+
+.img-testi {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+/* tulisan */
+@keyframes cunsText {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.content-text .text-testi {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.content-text.active .text-testi {
+    animation: cunsText .75s forwards;
+}
+
+/* logo title */
+.partner-title {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.partner-title.active {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: .5s;
+    transition-delay: .3s;
+}
+
+/* logo */
+.partner {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.partner.active {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+
+
+@media (max-width:768px) {
+    .testimoni-container {
+        margin-top: 20px;
+    }
+
+    .testimoni-container .img-box img {
+        position: absolute;
+        top: -15px;
+        left: 20%;
+        width: 80%;
+        height: calc(100% + 60px);
+    }
+
+    /* font */
+    .testimoni-container h4 {
+        font-size: 20px;
+    }
+
+    .testimoni-container h4 span {
+        font-size: 20px;
+    }
+
+    .testimoni-container p {
+        font-size: 18px;
+    }
+
+    .cunstomer-container h1 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:650px) {
+    .testimoni-container {
+        height: 400px;
+    }
+
+    /* testi atas */
+    .testimoni-container .ceo-container {
+        height: 70%;
+        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimoni-container .ceo-container .content-text {
+        position: relative;
+        height: 50%;
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .testimoni-container .ceo-container .img-box {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    .testimoni-container .img-box img {
+        position: absolute;
+        top: -80px;
+        left: 65%;
+        width: 30%;
+        /* background-color: blue; */
+        height: calc(100% + 80px);
+        object-fit: fill;
+    }
+
+    /* font */
+    .testimoni-container h4 {
+        font-size: 16px;
+    }
+
+    .testimoni-container h4 span {
+        font-size: 16px;
+    }
+
+    .testimoni-container p {
+        font-size: 13px;
+    }
+
+    .cunstomer-container h1 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:500px) {
+    .testimoni-container .img-box img {
+        position: absolute;
+        top: -90px;
+        left: 70%;
+        width: 38%;
+        /* background-color: blue; */
+        height: calc(100% + 90px);
+        object-fit: fill;
+    }
+
+    /* font */
+    .testimoni-container h4 {
+        font-size: 14px;
+    }
+
+    .testimoni-container h4 span {
+        font-size: 14px;
+    }
+
+    .testimoni-container p {
+        font-size: 12px;
+    }
+
+    .cunstomer-container h1 {
+        font-size: 11px;
+    }
+}
+
+@media (max-width:450px) {
+    .testimoni-container {
+        height: 350px;
+    }
+
+    .testimoni-container .img-box img {
+        position: absolute;
+        top: -90px;
+        left: 70%;
+        width: 40%;
+        /* background-color: blue; */
+        height: calc(100% + 90px);
+        object-fit: fill;
+    }
+}
+
+@media (max-width:425px) {
+    .testimoni-container {
+        height: 300px;
+    }
+
+    .testimoni-container .ceo-container::after {
+        top: -50px;
+        right: 0px;
+        font-size: 150px;
+    }
+
+    /* font */
+    .testimoni-container h4 {
+        font-size: 12px;
+    }
+
+    .testimoni-container h4 span {
+        font-size: 12px;
+    }
+
+    .testimoni-container p {
+        font-size: 10px;
+    }
+
+    .cunstomer-container h1 {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:375px) {
+    .testimoni-container .img-box img {
+        position: absolute;
+        top: -90px;
+        left: 70%;
+        width: 44%;
+        /* background-color: blue; */
+        height: calc(100% + 90px);
+        object-fit: fill;
+    }
+}
+
+@media (max-width:320px) {
+    .testimoni-container .img-box img {
+        position: absolute;
+        top: -90px;
+        left: 65%;
+        width: 46%;
+        /* background-color: blue; */
+        height: calc(100% + 90px);
+        object-fit: fill;
+    }
+}

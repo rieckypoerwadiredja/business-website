@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Secular+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --titile-font: "Quicksand", sans-serif;
+    --kutip: "Secular One", sans-serif;
+    --testi: "Montserrat", sans-serif;
+}
+
+.history-container {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    /* background-color: red; */
+    padding: 0;
+}
+
+.left-history {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+}
+
+.left-history .background-left {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: #111e35;
+    z-index: 1;
+}
+
+.left-history .img-box {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    z-index: 2;
+    width: 80%;
+    height: 50%;
+    /* background-color: brown; */
+
+}
+
+.left-history .img-box img {
+    /* filter */
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    opacity: 0;
+}
+
+
+.left-history .img-box::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: 50%;
+    width: 140px;
+    height: 120px;
+    z-index: 3;
+    background-image: url('../img/history/22.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px;
+    -webkit-box-shadow: -1px 9px 20px -1px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: -1px 9px 20px -1px rgba(0, 0, 0, 0.49);
+    box-shadow: -1px 9px 20px -1px rgba(0, 0, 0, 0.49);
+
+}
+
+.left-history .img-box::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    right: -10%;
+    width: 140px;
+    height: 120px;
+    z-index: 3;
+    border-radius: 3px;
+    /* background-color: red; */
+    background-image: url('../img/history/11.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-shadow: -1px 9px 20px -1px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: -1px 9px 20px -1px rgba(0, 0, 0, 0.49);
+    box-shadow: -1px 9px 20px -1px rgba(0, 0, 0, 0.49);
+}
+
+.right-history {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+    padding: 5% 3%;
+}
+
+.right-history h1 span {
+    color: #0eb04d;
+    font-size: 40px;
+    font-family: var(--titile-font);
+    text-transform: capitalize;
+}
+
+.right-history h1 {
+    font-size: 40px;
+    font-family: var(--titile-font);
+    text-transform: capitalize;
+    margin-bottom: 20px !important;
+}
+
+.right-history h1::after {
+    content: '';
+    position: relative;
+    width: 15%;
+    height: 4px;
+    background-color: #0eb04d;
+    display: block;
+    border-radius: 10%;
+    margin-top: 5px;
+}
+
+.right-history p {
+    font-size: 15px;
+    color: #000;
+    margin: 10px 0;
+}
+
+.overlay-left {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 2;
+    background-color: #0d1522;
+}
+
+.desc-history {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ANIMATION\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.toLeft {
+    left: 0 !important;
+    transition: 1.5s;
+}
+
+.overlay-left-ani {
+    animation: overlay .8s forwards;
+    animation-delay: 1s;
+}
+
+.img-ani {
+    animation: fadeIn .8s forwards;
+    animation-delay: 1s;
+}
+
+.desc-history-ani {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    transition: .5s;
+    transition-delay: 1.5s;
+}
+
+
+
+
+@keyframes overlay {
+    0% {
+        right: 0;
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+        right: 0;
+    }
+
+    75% {
+        left: 0 !important;
+
+    }
+
+    100% {
+        width: 0%;
+
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\RESPONSIVE\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media (max-width:850px) {
+
+    /*kanan */
+    .right-history h1 {
+        font-size: 35px;
+        margin-bottom: 20px !important;
+    }
+
+    .right-history h1 span {
+        font-size: 35px;
+    }
+
+    .right-history h1::after {
+        width: 15%;
+        height: 4px;
+        border-radius: 10%;
+        margin-top: 5px;
+    }
+
+    .right-history p {
+        font-size: 14px;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    /* kiri */
+    .left-history .img-box::after {
+        top: -10%;
+        right: 50%;
+        width: 140px;
+        height: 120px;
+    }
+
+    .left-history .img-box::before {
+        top: 35%;
+        right: -10%;
+        width: 140px;
+        height: 120px;
+    }
+
+    .left-history .img-box {
+        top: 20%;
+        right: 5%;
+        width: 85%;
+        height: 45%;
+    }
+}
+
+@media (max-width:768px) {
+    .history-container {
+        margin-top: 30px;
+    }
+
+    /*kanan */
+    .right-history h1 {
+        font-size: 30px;
+        margin-bottom: 20px !important;
+    }
+
+    .right-history h1 span {
+        font-size: 35px;
+    }
+
+    .right-history h1::after {
+        width: 15%;
+        height: 4px;
+        border-radius: 10%;
+        margin-top: 5px;
+    }
+
+    .right-history p {
+        font-size: 13px;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    /* kiri */
+    .left-history .img-box::after {
+        top: -10%;
+        right: 50%;
+        width: 110px;
+        height: 90px;
+    }
+
+    .left-history .img-box::before {
+        top: 35%;
+        right: -10%;
+        width: 110px;
+        height: 90px;
+    }
+
+    .left-history .img-box {
+        top: 20%;
+        right: 5%;
+        width: 85%;
+        height: 45%;
+    }
+}
+
+@media (max-width:650px) {
+
+    /* stuktur */
+    .history-container {
+        width: 100%;
+        height: 680px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+
+    .left-history {
+        width: 100%;
+        height: 50%;
+    }
+
+    .left-history .background-left {
+        width: 100%;
+    }
+
+    .right-history {
+        width: 100%;
+        height: 50%;
+        padding: 5% 10%;
+    }
+
+    /*kanan / bawah*/
+    .right-history h1 {
+        font-size: 25px;
+        margin-bottom: 20px !important;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    .right-history h1 span {
+        font-size: 25px;
+    }
+
+    .right-history h1::after {
+        width: 10%;
+        height: 3px;
+        border-radius: 10%;
+        margin-top: 10px;
+        margin-left: 40%;
+    }
+
+    .right-history p {
+        font-size: 12px;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    /* kiri / atas*/
+    .left-history .img-box::after {
+        top: -10%;
+        right: 80%;
+        width: 140px;
+        height: 100px;
+    }
+
+    .left-history .img-box::before {
+        top: 65%;
+        right: 10%;
+        width: 140px;
+        height: 100px;
+    }
+
+    .left-history .img-box {
+        top: 15%;
+        right: 8%;
+        width: 80%;
+        height: 70%;
+    }
+}
+
+@media (max-width:550px) {
+    .history-container {
+        margin-top: 0px;
+    }
+
+    /*kanan / bawah*/
+    .right-history h1 {
+        font-size: 20px;
+        margin-bottom: 20px !important;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    .right-history h1 span {
+        font-size: 20px;
+    }
+
+    .right-history h1::after {
+        width: 10%;
+        height: 3px;
+        border-radius: 10%;
+        margin-top: 2px;
+        margin-left: 30%;
+    }
+
+    .right-history p {
+        font-size: 11px;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    /* kiri / atas*/
+    .left-history .img-box::after {
+        top: -10%;
+        right: 75%;
+        width: 140px;
+        height: 100px;
+    }
+
+    .left-history .img-box::before {
+        top: 65%;
+        right: 10%;
+        width: 140px;
+        height: 100px;
+    }
+
+    .left-history .img-box {
+        top: 15%;
+        right: 8%;
+        width: 80%;
+        height: 70%;
+    }
+}
+
+@media (max-width:450px) {
+    .history-container {
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width:425px) {
+
+    /* stuktur */
+    .history-container {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+
+    .left-history {
+        width: 100%;
+        height: 45%;
+    }
+
+    .right-history {
+        width: 100%;
+        height: 55%;
+        padding: 5% 10%;
+    }
+
+    /*kanan / bawah*/
+    .right-history h1 {
+        font-size: 17px;
+        margin-bottom: 20px !important;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    .right-history h1 span {
+        font-size: 17px;
+    }
+
+    .right-history h1::after {
+        width: 10%;
+        height: 3px;
+        border-radius: 10%;
+        margin-top: 2px;
+        margin-left: 30%;
+    }
+
+    .right-history p {
+        font-size: 9.5px;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    /* kiri / atas*/
+    .left-history .img-box::after {
+        top: -10%;
+        right: 75%;
+        width: 100px;
+        height: 80px;
+    }
+
+    .left-history .img-box::before {
+        top: 75%;
+        right: 10%;
+        width: 100px;
+        height: 80px;
+    }
+
+    .left-history .img-box {
+        top: 15%;
+        right: 8%;
+        width: 80%;
+        height: 70%;
+    }
+}
+
+@media (max-width:375px) {
+    .history-container {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width:320px) {
+    .history-container {
+        margin-top: 130px;
+    }
+
+    /* stuktur */
+    .history-container {
+        width: 100%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+
+    .left-history {
+        width: 100%;
+        height: 40%;
+    }
+
+    .right-history {
+        width: 100%;
+        height: 60%;
+        padding: 5% 10%;
+    }
+
+    /*kanan / bawah*/
+    .right-history h1 {
+        font-size: 14px;
+        margin-bottom: 20px !important;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    .right-history h1 span {
+        font-size: 14px;
+    }
+
+    .right-history h1::after {
+        width: 10%;
+        height: 3px;
+        border-radius: 10%;
+        margin-top: 2px;
+        margin-left: 30%;
+    }
+
+    .right-history p {
+        font-size: 9.5px;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    /* kiri / atas*/
+    .left-history .img-box::after {
+        top: -10%;
+        right: 75%;
+        width: 90px;
+        height: 60px;
+    }
+
+    .left-history .img-box::before {
+        top: 75%;
+        right: 10%;
+        width: 90px;
+        height: 60px;
+    }
+
+    .left-history .img-box {
+        top: 15%;
+        right: 8%;
+        width: 80%;
+        height: 70%;
+    }
+}

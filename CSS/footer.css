@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --titile-font: "Quicksand", sans-serif;
+    --roboto: "Roboto", sans-serif;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #18181a;
+    display: flex;
+    flex-direction: column;
+    padding: 7% 100px 1% 100px;
+}
+
+footer .top {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    color: #fff;
+}
+
+footer .top .company {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top .company .merk {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* background-color: coral; */
+}
+
+footer .top .company .merk img {
+    width: 20%;
+    height: 80%;
+    object-fit: contain;
+    margin: 0 5px;
+    margin-top: -5px;
+}
+
+footer .top .company .merk .title {
+    width: 30%;
+    height: 100%;
+    /* background-color: crimson; */
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top .company .merk .title p {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: flex-start;
+    /* background-color: cyan; */
+    font-size: 11px;
+    font-family: var(--roboto);
+    color: #cecfd1;
+}
+
+footer .top .company .merk .title h1 {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+    font-family: var(--titile-font);
+}
+
+footer .top .company p.alamat {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #cecfd1;
+    font-family: var(--titile-font);
+}
+
+footer .top .desk {
+    position: relative;
+    width: calc(65%/3);
+    height: 100%;
+    /* background-color: chartreuse; */
+    display: flex;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .desk p {
+    margin-bottom: 10%;
+    font-size: 14px;
+    font-family: var(--titile-font);
+    font-weight: 800;
+}
+
+footer .desk a {
+    font-size: 12px;
+    font-family: var(--titile-font);
+    text-decoration: none;
+    color: #cecfd1;
+    padding: 5px 0;
+    transition: .3s;
+}
+
+footer .desk span.t {
+    margin-top: 20%;
+    font-weight: 700;
+    font-family: var(--titile-font);
+    color: #fff;
+    font-size: 12px;
+}
+
+footer .desk span {
+    font-size: 12px;
+    margin-top: 5%;
+    font-weight: 300;
+    font-family: var(--titile-font);
+    color: #cecfd1;
+    font-size: 10px;
+}
+
+footer .desk a:hover {
+    color: #ffffff;
+    transition: .3s;
+}
+
+footer .desk img {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+footer .bottom {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* background-color: yellow; */
+    border-top: 1px solid rgba(153, 153, 153, 0.795);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #cecfd1;
+}
+
+footer .bottom .left {
+    position: relative;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .bottom .left p {
+    font-size: 10px;
+}
+
+footer .bottom .right {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .bottom .right p {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+footer .bottom .right i {
+    font-size: 11px;
+}
+
+@media (max-width:900px) {
+    footer {
+        padding: 7% 80px 1% 80px;
+    }
+
+}
+
+@media (max-width:768px) {
+    footer {
+        padding: 7% 30px 1% 30px;
+    }
+
+    footer .top .company .merk .title p {
+        font-size: 10px;
+    }
+
+    footer .top .company .merk .title h1 {
+        font-size: 17px;
+    }
+
+    footer .top .company p.alamat {
+        font-size: 10px;
+    }
+
+    footer .desk p {
+        font-size: 12px;
+    }
+
+    footer .desk a {
+        font-size: 10px;
+    }
+
+    footer .desk span.t {
+        font-size: 10px;
+    }
+
+    footer .desk span {
+        font-size: 10px;
+    }
+
+
+    footer .bottom .left p {
+        font-size: 8px;
+    }
+
+    footer .bottom .right p {
+        font-size: 8px;
+    }
+
+    footer .bottom .right i {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:650px) {
+    footer {
+        height: 800px;
+        padding: 50px 30px 10px 30px;
+    }
+
+    footer .top {
+        height: 95%;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    footer .bottom {
+        height: 5%;
+    }
+
+    footer .top {
+        position: relative;
+        width: 100%;
+        height: 80%;
+        /* background-color: red; */
+        display: flex;
+        color: #fff;
+    }
+
+    footer .top .desk {
+        position: relative;
+        width: calc(65%/3);
+        height: 100%;
+        /* background-color: chartreuse; */
+        display: flex;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .top .company {
+        width: 100%;
+    }
+
+    footer .top .company .merk {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0;
+        height: 45%;
+        align-items: center;
+    }
+
+    footer .top .company .merk .title {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+    }
+
+    footer .top .company .merk .title h1 {
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    footer .top .company .merk .title p {
+        margin-top: -10px;
+    }
+
+    footer .top .company .merk img {
+        margin: 2px;
+        width: 15%;
+        object-fit: contain;
+        height: 90%;
+    }
+
+    footer .desk p {
+        margin: 10% 0;
+        font-size: 12px;
+    }
+
+    footer .bottom .left {
+        width: 65%;
+    }
+
+    footer .bottom {
+        margin-top: 40px;
+    }
+
+    footer .bottom .right {
+        width: 35%;
+    }
+}
+
+@media (max-width:550px) {
+    footer .bottom {
+        flex-direction: column;
+        height: 20%;
+    }
+
+    footer .top {
+        height: 90%;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    footer .bottom .left {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    footer .bottom .right {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .bottom .right p {
+        margin: 0 5px;
+    }
+
+}
+
+@media (max-width:425px) {
+    footer {
+        height: 800px;
+        padding: 50px 20px 10px 20px;
+    }
+
+
+}
