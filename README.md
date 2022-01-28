@@ -44,4 +44,4 @@ As a peacemaker, blue is not meant to stir things up. Blue hates the idea of cre
 
 ## License
 
-[MIT](https://rieckypoerwadiredja.github.io/business-website/blob/main/LICENSE.txt)
+[MIT](https://github.com/rieckypoerwadiredja/business-website/blob/main/LICENSE.txt)
