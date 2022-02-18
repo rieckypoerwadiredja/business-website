@@ -29,15 +29,18 @@ As a peacemaker, blue is not meant to stir things up. Blue hates the idea of cre
 - `/CSS/style testimoni.css` css for testimoni section with slider vanilla
 - `/CSS/sytle history.css` css for history section, section for tell constumer about shot history about company
 
+## Page Speed Test
+These are the results of tests and assessments of website performance and speed based on [PageTest](https://pagespeed.web.dev/) analysis.
 
+![Dekstop web](/img/md/page-pc.png "Dekstop web")
 
 ## Dependencies
 
 | Project      | Home Page                                         |
 |--------------|---------------------------------------------------|
 | HTML         | <https://html.com/>                               |
-| CSS          | <https://javascrit.com/>                          |
-| JAVASCRIPT   | <https://www.w3.org/Style/CSS/Overview.en.html/>  |
+| JAVASCRIPT   | <https://javascrit.com/>                          |
+| CSS          | <https://www.w3.org/Style/CSS/Overview.en.html/>  |
 
 ## Link Website
 (https://rieckypoerwadiredja.github.io/business-website/)
